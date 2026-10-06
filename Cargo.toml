@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "web"
+]
+resolver = "2"

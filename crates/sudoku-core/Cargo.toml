@@ -1,0 +1,8 @@
+[package]
+name = "sudoku-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = { version = "0.10.3", features = [] }
+rand_pcg = { version = "0.10.2", default-features = false }

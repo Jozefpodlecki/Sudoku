@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+    font-family: var(--font-sans);
+}
+
+.flex-col-center {
+  @apply flex flex-col items-center;
+}
+
+:root {
+    --main-bg-color: #ffffff;
+    --main-text-color: #18181b;
+}
+
+.dark {
+    --main-bg-color: #09090b;
+    --main-text-color: #fafafa;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+@layer base {
+	button:not([disabled]),
+	[role="button"]:not([disabled]) {
+		cursor: pointer;
+	}
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
